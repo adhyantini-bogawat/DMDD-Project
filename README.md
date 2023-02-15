@@ -30,4 +30,4 @@ information on vehicles, routes, managing driver information and passenger infor
 
 12. Tracking: Information about the bus such as the bus ID, the route the bus is following, any alerts/notifications regarding the bus and next stop.
 
-13. Bustop: Information about the the name of the bus stop, the city it belongs to and the route the bus stop falls on.
+13. Bustop: Information about the the name of the bus stop, the city it belongs to and the route the bus stop falls on
