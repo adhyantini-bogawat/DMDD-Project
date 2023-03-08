@@ -30,4 +30,8 @@ information on vehicles, routes, managing driver information and passenger infor
 
 12. Tracking: Information about the bus such as the bus ID, the route the bus is following, any alerts/notifications regarding the bus and next stop.
 
-13. Bustop: Information about the the name of the bus stop, the city it belongs to and the route the bus stop falls on.
+##  Updates made
+1. The bus stop entity was removed and added as an attribute in the route entity.
+2. Relationship between driver and route was established.
+3. Relationship between ticket and passenger was established. 
+4. More realistic attributes were added to every entity.
