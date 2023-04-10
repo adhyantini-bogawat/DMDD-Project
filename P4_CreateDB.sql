@@ -135,7 +135,7 @@ CREATE TABLE [dbo].[Passenger](
 	[country] [varchar](25),
 	[zipcode] [int] CONSTRAINT chk_zipcode CHECK (LEN(zipcode) = 5),
 	[phone] [bigint] UNIQUE CONSTRAINT Ph_length_check CHECK  (len([phone])=10), 
-	[emailid] [varchar](100) CONSTRAINT email_check CHECK (P_Email LIKE '[a-z,0-9,_,-]%@[a-z]%.[a-z][a-z]%'), 
+	[emailid] [varchar](100) CONSTRAINT email_check CHECK (emailid LIKE '[a-z,0-9,_,-]%@[a-z]%.[a-z][a-z]%'), 
 	[dob] [datetime], 
 	[gender] [char] (6), 
 	CONSTRAINT Passenger_PK  PRIMARY KEY (passenger_id), 
