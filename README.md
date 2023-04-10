@@ -1,8 +1,8 @@
-# Travel Company Management System
+# Bus Transport Database Management System
 
-In this project, we are going to design a database for a travel company, To
+In this project, we are going to design a database for a bus travel company, To
 provide a centralized database for storing, managing and analyzing transportation data, including 
-information on vehicles, routes, managing driver information and passenger information. We have also provided data on accidents occured by a particular driver and the vehcile. The data would help company provide a better customer service and more efficient and safe travel.
+information on buses, routes, managing driver information and passenger information. We have also provided data on accidents occured by a particular driver and the location. The data would help company provide a better customer service and more efficient and safe travel.
 
 ## Entities
 
