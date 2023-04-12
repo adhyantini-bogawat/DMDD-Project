@@ -4,9 +4,9 @@ GO
 
 INSERT INTO [dbo].[Bus] ([manufacturer], [Seating_capacity], [maximum_speed], [fuel_type], [fuel_efficiency])
 VALUES
-('Volvo', 50, 120, 'Diesel', '12 km/l'),
-('Mercedes', 40, 110, 'Petrol', '10 km/l'),
-('Tata', 60, 100, 'Diesel', '15 km/l'),
+('Volvo', 90, 140, 'Diesel', '12 km/l'),
+('Mercedes', 100, 180, 'Petrol', '10 km/l'),
+('Tata', 70, 120, 'Diesel', '15 km/l'),
 ('Scania', 50, 130, 'Diesel', '11 km/l'),
 ('Ashok Leyland', 40, 100, 'Diesel', '13 km/l'),
 ('MAN', 30, 140, 'Diesel', '9 km/l'),
@@ -43,7 +43,17 @@ VALUES
 (7, '2022-02-03', 'Toll Booth', 'Vehicle fire'),
 (8, '2021-09-12', 'Highway 101', 'Overturned vehicle'),
 (3, '2022-03-12', 'Construction Zone', 'Construction Equipment Hit'),
-(10, '2021-10-20', 'Highway 25', 'Animal Collision');
+(10,'2021-10-20', 'Highway 25', 'Animal Collision');
+(3, '2021-10-14', 'Highway A-12', 'Collision with another vehicle'),
+(9, '2022-01-02', 'Intersection of Main St. and 5th Ave.', 'Rear-end collision'),
+(2, '2022-02-15', 'Parking lot of mall', 'Vehicle hit by shopping cart'),
+(6, '2021-12-12', 'Freeway 405', 'Tire blowout'),
+(4, '2022-03-21', 'City Centre', 'Pedestrian accident'),
+(4, '2021-11-05', 'Residential Area', 'Hit and Run'),
+(8, '2022-02-09', 'Toll Booth', 'Vehicle fire'),
+(1, '2021-09-11', 'Highway 101', 'Overturned vehicle'),
+(1, '2022-03-17', 'Construction Zone', 'Construction Equipment Hit'),
+(9, '2021-10-23', 'Highway 25', 'Animal Collision');
 
 
 ---- INSERT TABLE – City
