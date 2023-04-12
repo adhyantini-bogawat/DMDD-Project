@@ -80,4 +80,10 @@ information on buses, routes, managing driver information and passenger informat
 4. Created a constraint on Passenger entity on zipcode column to make sure its length is 5 and length of phone number is 10
 5. Created a constraint on Feedback entity on rating column to make sure it is between 1 and 5
 
+## Dashboard
 ![Dashboard](Dashboard.png)
+
+## Team Members
+1. Adhyantini Bogawat (002766612)
+2. Ritvik Saxena (002747239)
+3. Niharika Karri (002727629)
