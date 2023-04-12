@@ -43,7 +43,7 @@ VALUES
 (7, '2022-02-03', 'Toll Booth', 'Vehicle fire'),
 (8, '2021-09-12', 'Highway 101', 'Overturned vehicle'),
 (3, '2022-03-12', 'Construction Zone', 'Construction Equipment Hit'),
-(10,'2021-10-20', 'Highway 25', 'Animal Collision');
+(10,'2021-10-20', 'Highway 25', 'Animal Collision'),
 (3, '2021-10-14', 'Highway A-12', 'Collision with another vehicle'),
 (9, '2022-01-02', 'Intersection of Main St. and 5th Ave.', 'Rear-end collision'),
 (2, '2022-02-15', 'Parking lot of mall', 'Vehicle hit by shopping cart'),
@@ -105,28 +105,28 @@ Select * from Tracking
 
 ----- Insert Table – Driver
 
-INSERT INTO [dbo].[Driver] (bus_id, name, house_no, street_name, zipcode, phone, license_id, driving_exp)
+INSERT INTO [dbo].[Driver] (bus_id, name, house_no, street_name, zipcode, phone, dob, license_id, driving_exp)
 VALUES 
-	(5, 'John Smith', '123 Main St', 'Downtown', 12345, '5551234', '12345ABC', 5),
-    (3, 'Jane Doe', '456 Elm St', 'Alston', 12345, '5555678', '67890DEF', 10),
-    (10, 'Bob Johnson', '789 Oak St', 'Maldan', 12345, '5559012', '34567GHI', 3),
-    (4, 'Sara Lee', '321 Pine St', 'Huntington', 12345, '5553456', '89012JKL', 7),
-    (1, 'Tom Jones', '654 Cedar St', 'Park st', 12345, '5557890', '23456MNO', 2),
-    (5, 'Alice Smith', '321 Main St', 'Downtown', 12345, '5554321', '54321CBA', 3),
-    (2, 'Bob Smith', '654 Elm St', 'Alston', 12345, '5558765', '87654FED', 8),
-    (NULL, 'Charlie Johnson', '987 Oak St', 'Maldan', 12345, '5552109', '10987IHG', 1),
-    (7, 'Samantha Lee', '456 Pine St', 'Huntington', 12345, '5556543', '54321LKI', 6),
-    (6, 'Tim Hanes', '789 Cedar St', 'Park st', 12345, '5550987', '09876ONM', 4),
-    (8, 'Emily Kim', '123 Maple St', 'Downtown', 12345, '5557777', '77777AAA', 2),
-    (NULL, 'David Johnson', '456 Elm St', 'Alston', 12345, '5555555', '55555BBB', 5),
-    (4, 'Erica Lee', '789 Oak St', 'Maldan', 12345, '5553333', '33333CCC', 9),
-    (9, 'George Jones', '321 Pine St', 'Huntington', 12345, '5551111', '11111DDD', 3),
-    (NULL, 'Felicia Smith', '654 Cedar St', 'Park st', 12345, '5559999', '99999EEE', 7),
-    (5, 'Henry Kim', '321 Main St', 'Downtown', 12345, '5558888', '88888FFF', 1),
-    (2, 'Isaac Johnson', '654 Elm St', 'Alston', 12345, '5557777', '77777GGG', 4),
-    (NULL, 'Jasmine Lee', '987 Oak St', 'Maldan', 12345, '5556666', '66666HHH', 6),
-    (7, 'Kevin Hanes', '456 Pine St', 'Huntington', 12345, '5555555', '55555III', 2),
-    (6, 'Lisa Kim', '789 Cedar St', 'Park st', 12345, '5554444', '44444JJJ', 8);
+	(5, 'John Smith', '123 Main St', 'Downtown', 12345, 5551234,'1998-03-22 09:30:00','12345ABC', 5),
+    (3, 'Jane Doe', '456 Elm St', 'Alston', 12345, 5555678, '1998-03-22 09:30:00','67890DEF', 10),
+    (10, 'Bob Johnson', '789 Oak St', 'Maldan', 12345,5559012,'1998-03-22 09:30:00' ,'34567GHI', 3),
+    (4, 'Sara Lee', '321 Pine St', 'Huntington', 12345, 5553456,'1995-03-22 09:30:00' ,'89012JKL', 7),
+    (1, 'Tom Jones', '654 Cedar St', 'Park st', 12345, 5557890,'1996-03-22 09:30:00' ,'23456MNO', 2),
+    (5, 'Alice Smith', '321 Main St', 'Downtown', 12345, 5554321,'1997-03-22 09:30:00' ,'54321CBA', 3),
+    (2, 'Bob Smith', '654 Elm St', 'Alston', 12345, 5558765,'1998-03-22 09:30:00' ,'87654FED', 8),
+    (NULL, 'Charlie Johnson', '987 Oak St', 'Maldan', 12345, 5552109,'1998-03-22 09:30:00' ,'10987IHG', 1),
+    (7, 'Samantha Lee', '456 Pine St', 'Huntington', 12345, 5556543, '1998-03-22 09:30:00','54321LKI', 6),
+    (6, 'Tim Hanes', '789 Cedar St', 'Park st', 12345, 5550987,'1998-03-22 09:30:00' ,'09876ONM', 4),
+    (8, 'Emily Kim', '123 Maple St', 'Downtown', 12345, 5557777,'1998-03-22 09:30:00' ,'77777AAA', 2),
+    (NULL, 'David Johnson', '456 Elm St', 'Alston', 12345, 5555555,'1998-03-22 09:30:00' ,'55555BBB', 5),
+    (4, 'Erica Lee', '789 Oak St', 'Maldan', 12345, 5553333,'1998-03-22 09:30:00','33333CCC', 9),
+    (9, 'George Jones', '321 Pine St', 'Huntington', 12345, 5551111,'1998-03-22 09:30:00' ,'11111DDD', 3),
+    (NULL, 'Felicia Smith', '654 Cedar St', 'Park st', 12345, 5559999,'1998-03-22 09:30:00' ,'99999EEE', 7),
+    (5, 'Henry Kim', '321 Main St', 'Downtown', 12345, 5558888, '1998-03-22 09:30:00','88888FFF', 1),
+    (2, 'Isaac Johnson', '654 Elm St', 'Alston', 12345, 5557777,'1998-03-22 09:30:00' ,'77777GGG', 4),
+    (NULL, 'Jasmine Lee', '987 Oak St', 'Maldan', 12345, 5556666,'1998-03-22 09:30:00' ,'66666HHH', 6),
+    (7, 'Kevin Hanes', '456 Pine St', 'Huntington', 12345, 5555555,'1998-03-22 09:30:00' ,'55555III', 2),
+    (6, 'Lisa Kim', '789 Cedar St', 'Park st', 12345, 5554444, '1998-03-22 09:30:00','44444JJJ', 8);
 
 
 ----- Insert table Schedule
@@ -203,4 +203,4 @@ VALUES (1, '2023-04-01 08:00:00', 'Incomplete'),
 	   (9, '2023-04-09 18:00:00','Complete'),
 	   (10, '2023-04-10 14:00:00','Complete');
 
-	   Select * from Passenger
+	   Select * from Driver

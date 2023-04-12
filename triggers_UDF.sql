@@ -43,6 +43,23 @@ Select * FROM Ticket
 GO
 
 
+--- UDF 3 ------
+-- To compute age based on date of birth of driver ----
+
+ -- CREATE FUNCTION dbo.CalculateDriverAge 
+ -- ( 
+	-- @dob datetime
+--) 
+--RETURNS int	 
+--AS 
+--BEGIN 
+    --DECLARE @age int 
+    --SET @age = DATEDIFF(hour,@dob,GETDATE())/8766.0
+   -- RETURN @age
+--END
+
+
+
 -- Trigger 1 -----
 --- Insert detail into booking Details Table -----
 go

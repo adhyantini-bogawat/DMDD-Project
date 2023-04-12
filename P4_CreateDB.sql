@@ -91,6 +91,22 @@ GO
 
 ---- Create Table - Driver
 
+--- UDF  ------
+-- To compute age based on date of birth of driver ----
+
+CREATE FUNCTION dbo.CalculateDriverAge 
+( 
+	@dob datetime
+) 
+RETURNS int	 
+AS 
+BEGIN 
+    DECLARE @age int 
+    SET @age = DATEDIFF(hour,@dob,GETDATE())/8766.0
+    RETURN @age
+END
+
+
 CREATE TABLE [dbo].[Driver](
 	[driver_id] [int] NOT NULL IDENTITY (1,1),
 	[bus_id] [int] ,
@@ -99,6 +115,8 @@ CREATE TABLE [dbo].[Driver](
 	[street_name] [varchar](50) ,
 	[zipcode] [int],
 	[phone] [int],
+	[dob] [date],
+	age AS dbo.CalculateDriverAge(dob),
 	[license_id] [varchar](20),
 	[driving_exp] [int],
 	CONSTRAINT Driver_PK  PRIMARY KEY (driver_id),
