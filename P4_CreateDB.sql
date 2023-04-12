@@ -1,3 +1,5 @@
+USE [master]
+
 IF EXISTS (SELECT name FROM sys.databases WHERE name = N'FinalProject')
     DROP DATABASE FinalProject
 GO
@@ -137,7 +139,9 @@ CREATE TABLE [dbo].[Passenger](
 	[phone] [bigint] UNIQUE CONSTRAINT Ph_length_check CHECK  (len([phone])=10), 
 	[emailid] [varchar](100) CONSTRAINT email_check CHECK (emailid LIKE '[a-z,0-9,_,-]%@[a-z]%.[a-z][a-z]%'), 
 	[dob] [datetime], 
-	[gender] [char] (6), 
+	[gender] [char] (6),
+	[username] [varchar](50),
+    [password] [varchar](400)
 	CONSTRAINT Passenger_PK  PRIMARY KEY (passenger_id), 
 ) ON [PRIMARY]
 Go

@@ -29,7 +29,9 @@ go
     @city = 'Pune',
     @state = 'MH', 
     @zipcode = 41104, 
-    @country = 'India'
+    @country = 'India',
+	@username = 'AdhyantiniBogawat',
+	@password = 'Adhyantini@123'
 
   EXEC  [FinalProject].[dbo].[PassengerOperations] @Action = 'UPDATE',
     @passenger_id = 12 ,
@@ -71,3 +73,8 @@ go
                   
 EXEC [FinalProject].[dbo].[BusOperations] @Action= 'DELETE',
                   @bus_id = 11
+
+				  
+declare @display_available char(1)
+EXEC Passenger_Detail_of_Review_Rating 1, @available=@display_available OUTPUT
+PRINT cast(@display_available as varchar)+ ' Reviews:'

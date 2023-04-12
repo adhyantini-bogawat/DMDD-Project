@@ -135,20 +135,20 @@ VALUES
 	(6, 1, '2023-03-26 11:30:00', '2023-03-26 13:30:00', 'On Time');
 	
 ----- Insert table Passenger
- 
-INSERT INTO [dbo].[Passenger] (fname, lname, address, street_name, city, state, country, zipcode, phone, emailid, dob, gender)
+INSERT INTO [dbo].[Passenger] (fname, lname, address, street_name, city, state, country, zipcode, phone, emailid, dob, gender, username, [password])
 VALUES 
-('John', 'Doe', '123 Main St', 'Downtown', 'Boston', 'MA', 'USA', 12345, 5551234123, 'johndoe@email.com', '1990-01-01', 'Male'),
-('Jane', 'Smith', '456 Elm St', 'Alston', 'Cambridge', 'MA', 'USA', 12345, 5555678432, 'janesmith@email.com', '1985-05-20', 'Female'),
-('Bob', 'Johnson', '789 Oak St', 'Maldan', 'Maldan', 'MA', 'USA', 12345, 5559034212, 'bobjohnson@email.com', '1995-10-12', 'Male'),
-('Sara', 'Lee', '321 Pine St', 'Huntington', 'Newton', 'MA', 'USA', 12345, 5552563456, 'saralee@email.com', '1992-03-15', 'Female'),
-('Tom', 'Jones', '654 Cedar St', 'Park st', 'Boston', 'MA', 'USA', 12345, 5557784890, 'tomjones@email.com', '1988-12-31', 'Male'),
-('Maria', 'Garcia', '123 Main St', 'Downtown', 'Boston', 'MA', 'USA', 12345, 5553571111, 'mariagarcia@email.com', '1980-07-10', 'Female'),
-('David', 'Johnson', '456 Elm St', 'Alston', 'Cambridge', 'MA', 'USA', 12345, 5552754222, 'davidjohnson@email.com', '1999-02-25', 'Male'),
-('Lucy', 'Smith', '789 Oak St', 'Maldan', 'Maldan', 'MA', 'USA', 12345, 5553389433, 'lucysmith@email.com', '1998-06-05', 'Female'),
-('James', 'Brown', '321 Pine St', 'Huntington', 'Newton', 'MA', 'USA', 12345, 5550984444, 'jamesbrown@email.com', '1975-11-18', 'Male'),
-('Linda', 'Davis', '654 Cedar St', 'Park st', 'Boston', 'MA', 'USA', 12345, 5555587555, 'lindadavis@email.com', '1982-09-02', 'Female');
+('John', 'Doe', '123 Main St', 'Downtown', 'Boston', 'MA', 'USA', 12345, 5551234123, 'johndoe@email.com', '1990-01-01', 'Male', 'johndoe','PasswordJohnDoe'),
+('Jane', 'Smith', '456 Elm St', 'Alston', 'Cambridge', 'MA', 'USA', 12345, 5555678432, 'janesmith@email.com', '1985-05-20', 'Female', 'janedoe', 'PasswordJaneDoe123'),
+('Bob', 'Johnson', '789 Oak St', 'Maldan', 'Maldan', 'MA', 'USA', 12345, 5559034212, 'bobjohnson@email.com', '1995-10-12', 'Male', 'bobj', 'PasswordBobJ@345'),
+('Sara', 'Lee', '321 Pine St', 'Huntington', 'Newton', 'MA', 'USA', 12345, 5552563456, 'saralee@email.com', '1992-03-15', 'Female', 'saralee','PasswordSaraLee'),
+('Tom', 'Jones', '654 Cedar St', 'Park st', 'Boston', 'MA', 'USA', 12345, 5557784890, 'tomjones@email.com', '1988-12-31', 'Male', 'tomj', 'Tomj@123'),
+('Maria', 'Garcia', '123 Main St', 'Downtown', 'Boston', 'MA', 'USA', 12345, 5553571111, 'mariagarcia@email.com', '1980-07-10', 'Female', 'mariag','MariaG123'),
+('David', 'Johnson', '456 Elm St', 'Alston', 'Cambridge', 'MA', 'USA', 12345, 5552754222, 'davidjohnson@email.com', '1999-02-25', 'Male', 'davidj',  'DavidJones123'),
+('Lucy', 'Smith', '789 Oak St', 'Maldan', 'Maldan', 'MA', 'USA', 12345, 5553389433, 'lucysmith@email.com', '1998-06-05', 'Female', 'lucys', 'LucyS12345'),
+('James', 'Brown', '321 Pine St', 'Huntington', 'Newton', 'MA', 'USA', 12345, 5550984444, 'jamesbrown@email.com', '1975-11-18', 'Male', 'jamesb', 'Password@123'),
+('Linda', 'Davis', '654 Cedar St', 'Park st', 'Boston', 'MA', 'USA', 12345, 5555587555, 'lindadavis@email.com', '1982-09-02', 'Female', 'lindad', 'Pass123');
 
+Select * from Ticket
 ----- Insert Table Ticket
 select * from Route
 INSERT INTO [dbo].[Ticket] (passenger_id, route_id ,seat_no, price, booking_date, payment_mode)
@@ -168,7 +168,7 @@ VALUES
 
 INSERT INTO Feedback (ticket_id, comment, rating) 
 VALUES 
-(1, 'Great trip!', 5),
+(2, 'Great trip!', 5),
 (2, 'Bus was a bit late', 3),
 (3, 'Comfortable seats', 4),
 (4, 'Terrible experience', 1),
@@ -180,7 +180,7 @@ VALUES
 (10, 'Bus was too crowded', 3);
 
 ---- Insert table Booking_Details
-
+Select * from Booking_Details
 INSERT INTO [dbo].[Booking_Details] ([ticket_id], [date], [payment_status])
 VALUES (1, '2023-04-01 08:00:00', 'Incomplete'),
 	   (2, '2023-04-02 09:30:00', 'Complete'),
@@ -192,3 +192,5 @@ VALUES (1, '2023-04-01 08:00:00', 'Incomplete'),
 	   (8, '2023-04-08 16:30:00','Incomplete'),
 	   (9, '2023-04-09 18:00:00','Complete'),
 	   (10, '2023-04-10 14:00:00','Complete');
+
+	   Select * from Passenger

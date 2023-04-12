@@ -68,8 +68,6 @@ BEGIN
   ELSE
 		INSERT INTO Booking_Details(ticket_id, [date], payment_status)
 		VALUES (@TicketId, @Res_date, 'Complete');
-
-
 END
 
 
@@ -78,4 +76,4 @@ select * from Passenger
 select* from Ticket
 
 INSERT INTO [dbo].[Ticket] (passenger_id, route_id ,seat_no, price, booking_date, payment_mode)
-VALUES (2, 5,19, 50, '2023-04-06 08:00:00', 'Cash');
+VALUES (3, 5,19, 50, '2023-04-06 08:00:00', 'Credit card');

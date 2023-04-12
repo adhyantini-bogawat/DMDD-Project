@@ -71,7 +71,9 @@ Go
 					@phone_number BIGINT = NULL,
                     @email VARCHAR(100) = NULL,
 					@date_of_birth DATE = NULL,
-					@gender VARCHAR(10) = NULL                             
+					@gender VARCHAR(10) = NULL,
+					@username VARCHAR(50) = null,
+					@password VARCHAR(400)=NULL
 
 AS
 BEGIN
@@ -87,9 +89,9 @@ BEGIN
       IF @Action = 'INSERT'
       BEGIN
 	INSERT INTO dbo.Passenger(fname, lname,[address],street_name ,city, [state], zipcode,
-                              country, phone, emailid, dob, gender)
+                              country, phone, emailid, dob, gender, username, [password])
 
-	VALUES (@first_name, @last_name,@address, @street,@city ,@state, @zipcode, @country, @phone_number, @email, @date_of_birth, @gender)
+	VALUES (@first_name, @last_name,@address, @street,@city ,@state, @zipcode, @country, @phone_number, @email, @date_of_birth, @gender, @username, @password)
       END
  
       --UPDATE
@@ -155,3 +157,28 @@ BEGIN
             WHERE bus_id = @bus_id
       END
 END
+
+--procedure 5 ---
+-- Getting passenger details based on feedback rating ---
+
+Go
+CREATE PROCEDURE Passenger_Detail_of_Review_Rating
+@rating int,
+@available char(1) OUTPUT
+
+AS
+IF EXISTS(SELECT ticket_id from Feedback where rating=@rating )
+
+BEGIN
+    SET @available='Y'    
+    SELECT  f.comment, f.rating, p.fname, p.lname, t.ticket_id FROM Feedback f
+	INNER JOIN Ticket t on t.ticket_id = f.ticket_id
+	INNER JOIN Passenger p on p.passenger_id = t.passenger_id
+	where f.rating = @rating
+	
+END
+ELSE
+BEGIN
+
+Print 'No reviews available'
+end
