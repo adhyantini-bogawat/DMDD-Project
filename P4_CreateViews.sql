@@ -43,3 +43,9 @@ CREATE VIEW Diesel_buses AS
 Select manufacturer,Seating_capacity, maximum_speed, fuel_type, fuel_efficiency  
 from Bus 
 where fuel_type = 'Diesel'; 
+
+CREATE VIEW RoutebwCities AS
+SELECT r.route_id, r.distance, r.bus_stop, r.hours, c1.name AS start_city_name, c2.name AS end_city_name
+FROM Route r
+JOIN City c1 ON r.Start_City = c1.city_id
+JOIN City c2 ON r.End_city = c2.city_id;
