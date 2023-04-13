@@ -206,4 +206,4 @@ VALUES (1, '2023-04-01 08:00:00', 'Incomplete'),
 	   (9, '2023-04-09 18:00:00','Complete'),
 	   (10, '2023-04-10 14:00:00','Complete');
 
-	   Select * from Driver
+	   Select * from Bus
