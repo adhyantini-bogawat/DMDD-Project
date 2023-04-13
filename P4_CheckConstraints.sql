@@ -10,7 +10,7 @@ ADD CHECK (Seating_capacity > 0)
 -- Already present ---
 ALTER TABLE [dbo].[Route]
 ADD CONSTRAINT CHK_ROUTE CHECK (distance > 0 AND hours > 0)
- 
+Â 
 ---- Check for Ticket price must be greater than 0
 
 ALTER TABLE [dbo].[Ticket]
@@ -19,8 +19,12 @@ ADD CHECK (price > 0)
 -- Check for zip code, phone number and email id format should be correct
 
 ALTER TABLE [dbo].[Passenger]
-ADD CONSTRAINT chk_zipcode CHECK (LEN(zipcode) = 5),
-ADD CONSTRAINT Ph_len_chk CHECK  (len([phone])=10); 
+ADD CONSTRAINT chk_zipcode
+CHECK (LEN(zipcode) = 5);
+
+ALTER TABLE [dbo].[Passenger]
+ADD CONSTRAINT Ph_len_chk 
+CHECK  (len([phone])=10); 
 
 -- Check for feedback rating must be in 1 to 5
 -- Already present ---
