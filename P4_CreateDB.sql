@@ -9,6 +9,7 @@ go
 USE [FinalProject]
 GO
 ---- CREATE TABLE - BUS
+--Constraints already present
 
 CREATE TABLE [dbo].[Bus](
 	[bus_id] [int] NOT NULL IDENTITY(1,1),
@@ -59,6 +60,7 @@ CREATE TABLE [dbo].[City](
 GO
 
 ---- CREATE TABLE Route
+--Constraints already present
 
 CREATE TABLE [dbo].[Route](
 	[route_id] [int] NOT NULL IDENTITY(1,1),
@@ -143,6 +145,7 @@ CREATE TABLE [dbo].[Schedule](
 GO
 
 ---- Create Table - Passenger
+--Constraints already present
 
 CREATE TABLE [dbo].[Passenger]( 
 	[passenger_id] [int] NOT NULL IDENTITY(1,1), 
@@ -165,6 +168,7 @@ CREATE TABLE [dbo].[Passenger](
 Go
 
 ---- Create Table - Ticket
+--Constraints already present
 
 CREATE TABLE [dbo].[Ticket](
 	[ticket_id] [int] NOT NULL IDENTITY(1,1),
@@ -183,6 +187,7 @@ CREATE TABLE [dbo].[Ticket](
 GO
 
 ---- Create table - feedback
+--Constraints already present
 
 CREATE TABLE [dbo].[Feedback](
 	[reference_id] [int] NOT NULL IDENTITY(1,1),
