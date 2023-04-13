@@ -1,4 +1,4 @@
-# Bus Transport Database Management System
+# Bus Transportation Database Management System
 
 In this project, we are going to design a database for a bus travel company, To
 provide a centralized database for storing, managing and analyzing transportation data, including 

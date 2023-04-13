@@ -9,14 +9,12 @@ conn = pyodbc.connect('DRIVER={'+driver+'};SERVER='+server+';DATABASE='+database
 cursor = conn.cursor()
 
 
-st.title('Bus Tour Database Management System')
+st.title('Bus Transportation Database Management System')
 st.subheader('Driver')
 
 # Define CRUD functions
 def create_driver(bus_id, name, house_no, street_name, zipcode, phone, dob, license_id, driving_exp):
     insert_query = cursor.execute("INSERT INTO Driver (bus_id, name, house_no, street_name, zipcode, phone, dob, license_id, driving_exp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", bus_id, name, house_no, street_name, zipcode, phone, dob, license_id, driving_exp)
-    # values = (emp_fname, emp_lname, emp_email, emp_phone, emp_street_address, emp_house_no, emp_city, emp_state, emp_zip, emp_gender, emp_designation)
-    # cursor.execute(insert_query, values)
     conn.commit()
     st.success("Driver details successfully added!")
 

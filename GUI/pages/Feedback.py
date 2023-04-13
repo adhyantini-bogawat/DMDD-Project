@@ -9,7 +9,7 @@ conn = pyodbc.connect('DRIVER={'+driver+'};SERVER='+server+';DATABASE='+database
 cursor = conn.cursor()
 
 
-st.title('Blue Bikes Database Management System')
+st.title('Bus Transportation Database Management System')
 st.subheader('Feedback')
 
 def create_feedback(ticket_id, comment, rating):
@@ -51,7 +51,3 @@ elif option == "Read":
     ticketid = st.text_input("Enter Ticket ID:")
     if st.button("View Feedback"):
         read_feedback(ticketid)
-
-# Close the cursor and connection
-# cursor.close()
-# conn.close()

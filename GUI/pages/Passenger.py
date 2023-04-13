@@ -9,7 +9,7 @@ conn = pyodbc.connect('DRIVER={'+driver+'};SERVER='+server+';DATABASE='+database
 cursor = conn.cursor()
 
 
-st.title('Bus Tour Database Management System')
+st.title('Bus Transportation Database Management System')
 st.subheader('Passenger')
 
 # Define CRUD functions
