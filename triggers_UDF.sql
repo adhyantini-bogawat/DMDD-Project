@@ -26,7 +26,7 @@ SELECT * from Bus
 IF OBJECT_ID (N'Passenger_Details', N'IF') IS NOT NULL
     DROP FUNCTION Passenger_Details;
 go
-CREATE FUNCTION Passenger_Details (@seat_number VARCHAR(25))
+Alter FUNCTION Passenger_Details (@seat_number VARCHAR(25), @route_id int)
 RETURNS TABLE
 AS
 RETURN
@@ -37,8 +37,9 @@ RETURN
                          INNER JOIN [Route] r ON r.route_id = t.route_id
                          INNER JOIN Tracking tracking ON tracking.route_id = r.route_id
                          WHERE t.seat_no = @seat_number
+						 AND r.route_id = @route_id
 );
-SELECT * FROM Passenger_Details(12);
+SELECT * FROM Passenger_Details(12,1);
 Select * FROM Ticket
 GO
 
